@@ -959,10 +959,12 @@ function Construct()
 
 	local menu = 6
 	VMenu.AddMenu(menu, "", "armurerie") -- default = Header "Texte" sur fond bleu
-	VMenu.AddFunc(menu, "M4", "vmenu:getArmory", {"WEAPON_CARBINERIFLE"}, "Obtenir cette arme")
-	VMenu.AddFunc(menu, "Fusil à pompe", "vmenu:getArmory", {"WEAPON_PUMPSHOTGUN"}, "Obtenir cette arme")
-	VMenu.AddFunc(menu, "Pistolet", "vmenu:getArmory", {"WEAPON_PISTOL"}, "Obtenir cette arme")
+	VMenu.AddFunc(menu, "Lampe Torche", "vmenu:getArmory", {"WEAPON_Flashlight"}, "Obtenir cette arme")
 	VMenu.AddFunc(menu, "Matraque", "vmenu:getArmory", {"WEAPON_NIGHTSTICK"}, "Obtenir cette arme")
+	VMenu.AddFunc(menu, "Pistolet", "vmenu:getArmory", {"WEAPON_PISTOL"}, "Obtenir cette arme")
+	VMenu.AddFunc(menu, "Fusil à pompe", "vmenu:getArmory", {"WEAPON_PUMPSHOTGUN"}, "Obtenir cette arme")
+	VMenu.AddFunc(menu, "M4", "vmenu:getArmory", {"WEAPON_CARBINERIFLE"}, "Obtenir cette arme")
+	VMenu.AddFunc(menu, "Sniper", "vmenu:getArmory", {"WEAPON_SNIPERRIFLE"}, "Obtenir cette arme")
 
 	local menu = 7
 	VMenu.AddMenu(menu, "", "default") -- default = Header "Texte" sur fond bleu

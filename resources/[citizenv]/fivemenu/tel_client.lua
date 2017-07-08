@@ -17,7 +17,9 @@ AddEventHandler("menutel:PhoneOG", function(target, mytel)
 		VMenu.AddSep(98, tostring(mytel))
 		VMenu.AddFunc(98, "Retour", "vmenu:MainMenuOG", {}, "Retour")
 		VMenu.AddFunc(98, "Ajouter un contact", "tel:add", {}, "Valider")
-		VMenu.AddFunc(98, "Appeler la police", "tel:call", {"911"}, "Appeller")
+		VMenu.AddFunc(98, "Appeler la Police", "tel:call", {"911"}, "Appeler")
+		VMenu.AddFunc(98, "Appeler un Depanneur", "tell:callDep", {"200"}, "Appeler")
+		VMenu.AddFunc(98, "Appeler un Taxi", "tel:callTaxi", {"14"}, "Appeler")
 		for ind, value in pairs(PHONEBOOK) do
 			VMenu.AddFunc(98, value.nom .. " " .. value.prenom .. " " .. tostring(ind), "tel:call", {ind}, "Appeler: " .. tostring(ind))
 		end

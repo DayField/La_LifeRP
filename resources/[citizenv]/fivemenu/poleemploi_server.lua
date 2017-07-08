@@ -19,7 +19,7 @@ function quitLastJob(source, job)
   elseif job == 4 then
     TriggerClientEvent("jobslegal:mineEnding", source)
   elseif job == 5 then
-
+	TriggerEvent('es_tax:endingService', source, 0)
   elseif job == 6 then
     TriggerClientEvent("transporter:endingDay", source)
   elseif job == 7 then
@@ -36,6 +36,8 @@ function quitLastJob(source, job)
     TriggerClientEvent("jobslegal:morgEnding", source)
   elseif job == 13 then
     TriggerEvent('es_em:endingService', source, 0)
+  elseif job == 14 then
+    TriggerEvent('es_dep:endingService', source, 0)
   end
 end
 
