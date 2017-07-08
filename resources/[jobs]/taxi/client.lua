@@ -394,7 +394,7 @@ end
 	if isInServiceTaxi then
 		Notify("Vous avez ~r~fini~s~ votre service") 
 		if (useModelMenu == true) then
-		TriggerServerEvent("mm:spawn2") 
+		TriggerServerEvent("vmenu:lastChar")
 		end
 		TriggerServerEvent('taxi:sv_setService', 0) 
 		if (useVdkCall == true) then

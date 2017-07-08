@@ -124,9 +124,9 @@ TriggerEvent('es:getPlayerFromId', source, function(user)
   if(idjob == taxijob and player == boss or player == boss2) then
   local data = GetSolde()
   print(data)
-  TriggerClientEvent("es_freeroam:notify", source, "CHAR_TAXI", 1, "Coffre Entreprise", false, "Solde restant : ~b~"..data.."$")
+  TriggerClientEvent("citizenv:notify", source, "CHAR_TAXI", 1, "Coffre Entreprise", false, "Solde restant : ~b~"..data.."$")
   else
-   TriggerClientEvent("es_freeroam:notify", source, "CHAR_TAXI", 1, "Coffre Entreprise", false, "~r~Tu n'est pas le patron !")
+   TriggerClientEvent("citizenv:notify", source, "CHAR_TAXI", 1, "Coffre Entreprise", false, "~r~Tu n'est pas le patron !")
   end
 end)
 end)
@@ -149,12 +149,12 @@ TriggerEvent('es:getPlayerFromId', source, function(user)
       if(tonumber(prixajoute) <= tonumber(user:money) and tonumber(prixajoute) >= 0) then    
         user:removeMoney((prixajoute))
         updateCoffre(player,prixavant,prixtotal,prixajoute)
-        TriggerClientEvent("es_freeroam:notify", source, "CHAR_TAXI", 1, "Coffre Entreprise", false, "Dépôt : +~g~"..prixajoute.."$")
+        TriggerClientEvent("citizenv:notify", source, "CHAR_TAXI", 1, "Coffre Entreprise", false, "Dépôt : +~g~"..prixajoute.."$")
       else
-         TriggerClientEvent("es_freeroam:notify", source, "CHAR_TAXI", 1, "ATTENTION", false, "~r~Vous n'avez pas assez d'argent !")
+         TriggerClientEvent("citizenv:notify", source, "CHAR_TAXI", 1, "ATTENTION", false, "~r~Vous n'avez pas assez d'argent !")
       end
      else
-   TriggerClientEvent("es_freeroam:notify", source, "CHAR_TAXI", 1, "Coffre Entreprise", false, "~r~Tu n'est pas le patron !")
+   TriggerClientEvent("citizenv:notify", source, "CHAR_TAXI", 1, "Coffre Entreprise", false, "~r~Tu n'est pas le patron !")
     end
 end)
 end)
@@ -177,12 +177,12 @@ TriggerEvent('es:getPlayerFromId', source, function(user)
       if(tonumber(prixenleve) >= 0 and tonumber(prixtotal) >= -1) then    
 	    updateCoffre(player,prixavant,prixtotal,prixenleve)
         user:addMoney(prixenleve)
-        TriggerClientEvent("es_freeroam:notify", source, "CHAR_TAXI", 1, "Coffre Entreprise", false, "Retrait: -~r~"..prixenleve.." $")   
+        TriggerClientEvent("citizenv:notify", source, "CHAR_TAXI", 1, "Coffre Entreprise", false, "Retrait: -~r~"..prixenleve.." $")   
       else
-               TriggerClientEvent("es_freeroam:notify", source, "CHAR_TAXI", 1, "Coffre Entreprise", false, "~r~Coffre vide ou montant invalide !")  
+               TriggerClientEvent("citizenv:notify", source, "CHAR_TAXI", 1, "Coffre Entreprise", false, "~r~Coffre vide ou montant invalide !")  
       end
      else
-   TriggerClientEvent("es_freeroam:notify", source, "CHAR_TAXI", 1, "Coffre Entreprise", false, "~r~Tu n'est pas le patron !")
+   TriggerClientEvent("citizenv:notify", source, "CHAR_TAXI", 1, "Coffre Entreprise", false, "~r~Tu n'est pas le patron !")
     end
 end)
 end)
@@ -195,9 +195,9 @@ TriggerEvent('es:getPlayerFromId', source, function(user)
   if(idjob == taxijob and player == boss or player == boss2)then
   local data = GetDirtySolde()
   print(data)
-  TriggerClientEvent("es_freeroam:notify", source, "CHAR_TAXI", 1, "Coffre Entreprise", false, "Solde restant : ~b~"..data.."$")
+  TriggerClientEvent("citizenv:notify", source, "CHAR_TAXI", 1, "Coffre Entreprise", false, "Solde restant : ~b~"..data.."$")
   else
-   TriggerClientEvent("es_freeroam:notify", source, "CHAR_TAXI", 1, "Coffre Entreprise", false, "~r~Tu n'est pas le patron !")
+   TriggerClientEvent("citizenv:notify", source, "CHAR_TAXI", 1, "Coffre Entreprise", false, "~r~Tu n'est pas le patron !")
   end
 end)
 end)
@@ -219,12 +219,12 @@ TriggerEvent('es:getPlayerFromId', source, function(user)
       if(tonumber(prixajoute) <= tonumber(dcash) and tonumber(prixajoute) >= 0) then    
         user:removeDirty_Money(prixajoute)
         updateCoffreDirty(player,prixavant,prixtotal,prixajoute)
-        TriggerClientEvent("es_freeroam:notify", source, "CHAR_TAXI", 1, "Coffre Entreprise", false, "Dépôt : +~g~"..prixajoute.."$")
+        TriggerClientEvent("citizenv:notify", source, "CHAR_TAXI", 1, "Coffre Entreprise", false, "Dépôt : +~g~"..prixajoute.."$")
       else
-         TriggerClientEvent("es_freeroam:notify", source, "CHAR_TAXI", 1, "Coffre Entreprise", false, "~r~Vous n'avez pas assez d'argent !")
+         TriggerClientEvent("citizenv:notify", source, "CHAR_TAXI", 1, "Coffre Entreprise", false, "~r~Vous n'avez pas assez d'argent !")
       end
       else
-   TriggerClientEvent("es_freeroam:notify", source, "CHAR_TAXI", 1, "Coffre Entreprise", false, "~r~Tu n'est pas le patron !")
+   TriggerClientEvent("citizenv:notify", source, "CHAR_TAXI", 1, "Coffre Entreprise", false, "~r~Tu n'est pas le patron !")
     end
 end)
 end)
@@ -248,12 +248,12 @@ TriggerEvent('es:getPlayerFromId', source, function(user)
       if(tonumber(prixenleve) >= 0 and tonumber(prixtotal) >= -1) then    
 	     updateCoffreDirty(player,prixavant,prixtotal,prixenleve)
         user:addDirty_Money(prixenleve)
-        TriggerClientEvent("es_freeroam:notify", source, "CHAR_TAXI", 1, "Coffre Entreprise", false, "Retrait: -~r~"..prixenleve.." $")   
+        TriggerClientEvent("citizenv:notify", source, "CHAR_TAXI", 1, "Coffre Entreprise", false, "Retrait: -~r~"..prixenleve.." $")   
 	  else
-        TriggerClientEvent("es_freeroam:notify", source, "CHAR_TAXI", 1, "Coffre Entreprise", false, "~r~Coffre vide ou montant invalide !") 
+        TriggerClientEvent("citizenv:notify", source, "CHAR_TAXI", 1, "Coffre Entreprise", false, "~r~Coffre vide ou montant invalide !") 
       end
       else
-   TriggerClientEvent("es_freeroam:notify", source, "CHAR_TAXI", 1, "Coffre Entreprise", false, "~r~Tu n'est pas le patron !")
+   TriggerClientEvent("citizenv:notify", source, "CHAR_TAXI", 1, "Coffre Entreprise", false, "~r~Tu n'est pas le patron !")
     end
 end)
 end)
@@ -270,17 +270,17 @@ AddEventHandler("taxi:BlanchirCash", function(amount)
 	    local ablanchir = amount
 		
 		if (dcash <= 0 or ablanchir <= 0) then
-			 TriggerClientEvent("es_freeroam:notify", source, "CHAR_TAXI", 1, "Blanchisserie", false, "~y~Tu n'a pas d'argent à blanchir")
+			 TriggerClientEvent("citizenv:notify", source, "CHAR_TAXI", 1, "Blanchisserie", false, "~y~Tu n'a pas d'argent à blanchir")
 		else
 		local washedcash = ablanchir * tauxblanchiment
 		local total = cash + washedcash
 		local totald = dcash - ablanchir
 		user:setMoney(total)
 		user:setDirty_Money(totald)
-	    TriggerClientEvent("es_freeroam:notify", source, "CHAR_TAXI", 1, "Blanchisserie", false, "Vous avez blanchi ~r~".. tonumber(ablanchir) .."$~s~ d'argent sale.~s~ Vous avez maintenant ~g~".. tonumber(total) .."$")
+	    TriggerClientEvent("citizenv:notify", source, "CHAR_TAXI", 1, "Blanchisserie", false, "Vous avez blanchi ~r~".. tonumber(ablanchir) .."$~s~ d'argent sale.~s~ Vous avez maintenant ~g~".. tonumber(total) .."$")
 	    end
     	else
-        TriggerClientEvent("es_freeroam:notify", source, "CHAR_TAXI", 1, "Blanchisserie", false, "~r~Tu n'est pas le patron !")
+        TriggerClientEvent("citizenv:notify", source, "CHAR_TAXI", 1, "Blanchisserie", false, "~r~Tu n'est pas le patron !")
         end
 	end)
 end)
