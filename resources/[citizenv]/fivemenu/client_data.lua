@@ -17,7 +17,7 @@ jobs = {
   {name="Nettoyeur de piscine", id=2},
   {name="Éboueur", id=3},
   {name="Mineur", id=4},
-  --{name="Chauffeur de taxi", id=5},
+  {name="Chauffeur de taxi", id=5},
   {name="Livreur de bois", id=6},
   {name="Livreur de citerne", id=7},
   {name="Livreur de conteneur", id=8},
@@ -26,7 +26,7 @@ jobs = {
   {name="Fossoyeur", id=11},
   {name="Préposé à la morgue", id=12},
   {name="Ambulancier", id=13},
-  --{name="Dépanneur", id=14},
+  {name="Dépanneur", id=14},
 }
 
 hair = {
